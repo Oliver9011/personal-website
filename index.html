@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陶承启 | Oliver Tao</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ============================================
+         Cursor Follower
+         ============================================ -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- ============================================
+         Navigation
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">CT</span>
+                <span class="logo-dot"></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" data-i18n="nav.about" class="nav-link">关于</a>
+                <a href="#experience" data-i18n="nav.experience" class="nav-link">经历</a>
+                <a href="#photography" data-i18n="nav.photography" class="nav-link">摄影</a>
+                <a href="#contact" data-i18n="nav.contact" class="nav-link">联系</a>
+            </div>
+            <div class="nav-right">
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-current">EN</span>
+                    <span class="lang-bg"></span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         Hero Section
+         ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-slideshow" id="heroSlideshow">
+            <div class="hero-slide active" style="background-image: url('images/DSC054310103.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/DSC05738-0111.JPG');"></div>
+            <div class="hero-slide" style="background-image: url('images/DSC06555-0329.JPG');"></div>
+            <div class="hero-slide" style="background-image: url('images/001-0429.JPG');"></div>
+        </div>
+
+
+        <div class="hero-overlay"></div>
+        <div class="hero-gradient"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-i18n="hero.badge">MARKETING · PHOTOGRAPHY</div>
+            <h1 class="hero-name">
+                <span class="hero-name-chinese">陶承启</span>
+                <span class="hero-name-divider"></span>
+                <span class="hero-name-english">Oliver Tao</span>
+            </h1>
+            <p class="hero-tagline" data-i18n="hero.tagline">理性分析世界，镜头记录温度</p>
+            <p class="hero-tagline-en" data-i18n="hero.taglineEn">Analyze with reason, capture with warmth.</p>
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-primary" data-i18n="hero.explore">
+                    <span>探索更多</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero.contact">
+                    <span>联系我</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span data-i18n="hero.scroll">向下滚动</span>
+            <div class="scroll-line"></div>
+        </div>
+
+        <div class="hero-slide-indicators" id="slideIndicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
+
+    <!-- ============================================
+         About Section
+         ============================================ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">01</span>
+                <h2 data-i18n="about.title">关于我</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p data-i18n="about.p1">
+                        我是陶承启，香港中文大学市场营销理学硕士在读，本科毕业于香港中文大学（深圳）环球商务管理专业。我热衷于将数据分析与商业洞察相结合，在金融、咨询领域积累了丰富的实战经验。
+                    </p>
+                    <p data-i18n="about.p2">
+                        同时，我也是一名摄影师。镜头是我观察世界的另一双眼睛——从城市街角到自然风光，从人像情绪到建筑几何，我始终相信，好的影像能传递超越语言的力量。
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat reveal">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label" data-i18n="about.stat1">实习经历</span>
+                        </div>
+                        <div class="stat reveal">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label" data-i18n="about.stat2">摄影城市</span>
+                        </div>
+                        <div class="stat reveal">
+                            <span class="stat-number" data-count="4">0</span>
+                            <span class="stat-label" data-i18n="about.stat3">语言能力</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal">
+                    <div class="image-frame">
+                        <img src="个人照/953A0208.JPG" alt="Oliver Tao" class="about-photo" loading="lazy">
+                        <div class="image-frame-border"></div>
+                        <div class="image-frame-corner top-left"></div>
+                        <div class="image-frame-corner top-right"></div>
+                        <div class="image-frame-corner bottom-left"></div>
+                        <div class="image-frame-corner bottom-right"></div>
+                    </div>
+                    <div class="about-image-badge">
+                        <i class="fas fa-camera"></i>
+                        <span data-i18n="about.photoBadge">摄影师 · 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Education Section
+         ============================================ -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">02</span>
+                <h2 data-i18n="education.title">教育背景</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025 – 2026</div>
+                        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 data-i18n="education.cuhk.title">香港中文大学</h3>
+                        <p class="timeline-sub" data-i18n="education.cuhk.degree">市场营销理学硕士</p>
+                        <p class="timeline-desc" data-i18n="education.cuhk.desc">香港 · 主修：战略管理、财务决策、数据分析</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 – 2025</div>
+                        <div class="timeline-icon"><i class="fas fa-university"></i></div>
+                        <h3 data-i18n="education.cuhksz.title">香港中文大学（深圳）</h3>
+                        <p class="timeline-sub" data-i18n="education.cuhksz.degree">环球商务管理学士</p>
+                        <p class="timeline-desc" data-i18n="education.cuhksz.desc">深圳 · GPA前15% · 校庆学生代表（Top 1%）</p>
+                        <p class="timeline-desc exchange" data-i18n="education.cuhksz.exchange">交换：鲁汶大学（比利时，全球Top 50）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Experience Section
+         ============================================ -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">03</span>
+                <h2 data-i18n="experience.title">工作经历</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-grid">
+                <div class="exp-card reveal" style="--delay: 0.1s;">
+                    <div class="exp-card-bg"></div>
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <span class="exp-tag" data-i18n="experience.forthright.tag">私人财富</span>
+                            <h3 data-i18n="experience.forthright.company">方德证券</h3>
+                            <span class="exp-role" data-i18n="experience.forthright.role">私人财富管理实习生</span>
+                        </div>
+                        <span class="exp-date">2026.01 – 2026.03</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="experience.forthright.d1">协助高级客户经理为客户提供投资咨询与财富解决方案</li>
+                        <li data-i18n="experience.forthright.d2">进行市场研究，制定与客户风险偏好一致的资产配置策略</li>
+                        <li data-i18n="experience.forthright.d3">准备专业客户演示、投资组合审查及投资建议材料</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card reveal" style="--delay: 0.2s;">
+                    <div class="exp-card-bg"></div>
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <span class="exp-tag" data-i18n="experience.foshan.tag">风险投资</span>
+                            <h3 data-i18n="experience.foshan.company">佛山医药健康创投</h3>
+                            <span class="exp-role" data-i18n="experience.foshan.role">投资分析实习生</span>
+                        </div>
+                        <span class="exp-date">2024.09 – 2024.12</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="experience.foshan.d1">对生物科技初创企业进行行业格局分析，评估20+并购标的</li>
+                        <li data-i18n="experience.foshan.d2">协助投资经理进行财务建模、尽职调查与风险收益分析</li>
+                        <li data-i18n="experience.foshan.d3">撰写投资报告，提升决策效率15%</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card reveal" style="--delay: 0.3s;">
+                    <div class="exp-card-bg"></div>
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <span class="exp-tag" data-i18n="experience.kotler.tag">战略咨询</span>
+                            <h3 data-i18n="experience.kotler.company">科特勒咨询集团</h3>
+                            <span class="exp-role" data-i18n="experience.kotler.role">咨询实习生</span>
+                        </div>
+                        <span class="exp-date">2024.05</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="experience.kotler.d1">为房地产客户提供高端高尔夫客群市场进入战略支持</li>
+                        <li data-i18n="experience.kotler.d2">进行竞争对标与客户细分，识别三大关键市场差异化因素</li>
+                        <li data-i18n="experience.kotler.d3">提供可执行建议以优化客户定位与收入潜力</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card reveal" style="--delay: 0.4s;">
+                    <div class="exp-card-bg"></div>
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <span class="exp-tag" data-i18n="experience.kaiyuan.tag">行业研究</span>
+                            <h3 data-i18n="experience.kaiyuan.company">开源证券</h3>
+                            <span class="exp-role" data-i18n="experience.kaiyuan.role">研究实习生（电子组）</span>
+                        </div>
+                        <span class="exp-date">2024.02 – 2024.05</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="experience.kaiyuan.d1">分析半导体及元器件行业趋势与价值链</li>
+                        <li data-i18n="experience.kaiyuan.d2">建立DCF与可比公司模型，撰写5+研究报告</li>
+                        <li data-i18n="experience.kaiyuan.d3">与分析师协作提供可执行洞察，提升客户覆盖深度</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Photography Section
+         ============================================ -->
+    <section class="section photography" id="photography">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">04</span>
+                <h2 data-i18n="photography.title">摄影作品</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="section-subtitle reveal" data-i18n="photography.subtitle">用镜头捕捉世界的温度与质感</p>
+
+            <!-- Filter Tags -->
+            <div class="photo-filters reveal">
+                <button class="filter-btn active" data-filter="all" data-i18n="photography.filterAll">全部</button>
+                <button class="filter-btn" data-filter="landscape" data-i18n="photography.filterLandscape">风光</button>
+                <button class="filter-btn" data-filter="city" data-i18n="photography.filterCity">城市</button>
+                <button class="filter-btn" data-filter="nature" data-i18n="photography.filterNature">自然</button>
+            </div>
+
+            <div class="photo-gallery reveal" id="photoGallery">
+                <div class="gallery-item gallery-item-wide" data-category="landscape">
+                    <img src="images/DSC054310103.jpg" alt="风光摄影" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">风光一瞥</span>
+                            <span class="gallery-cat" data-i18n="photography.filterLandscape">风光</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="city">
+                    <img src="images/DSC05738-0111.JPG" alt="城市摄影" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">城市光影</span>
+                            <span class="gallery-cat" data-i18n="photography.filterCity">城市</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="city">
+                    <img src="images/DSC06555-0329.JPG" alt="城市街角" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">街角故事</span>
+                            <span class="gallery-cat" data-i18n="photography.filterCity">城市</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="city">
+                    <img src="images/001-0429.JPG" alt="城市建筑" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">建筑几何</span>
+                            <span class="gallery-cat" data-i18n="photography.filterCity">城市</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="city">
+                    <img src="images/DSC058110117.jpg" alt="城市夜景" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">夜色迷离</span>
+                            <span class="gallery-cat" data-i18n="photography.filterCity">城市</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="nature">
+                    <img src="images/DSC061640301.jpg" alt="自然风光" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">自然之美</span>
+                            <span class="gallery-cat" data-i18n="photography.filterNature">自然</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="landscape">
+                    <img src="images/DSC071650405.jpg" alt="风光摄影" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">山川远眺</span>
+                            <span class="gallery-cat" data-i18n="photography.filterLandscape">风光</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="nature">
+                    <img src="images/DSC073580406.jpg" alt="自然生态" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <span class="gallery-title">静谧自然</span>
+                            <span class="gallery-cat" data-i18n="photography.filterNature">自然</span>
+                            <span class="gallery-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         Lightbox
+         ============================================ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- ============================================
+         Skills Section
+         ============================================ -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">05</span>
+                <h2 data-i18n="skills.title">技能与证书</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal" style="--delay: 0.1s;">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 data-i18n="skills.consulting.title">咨询与分析</h3>
+                    <div class="skill-tags">
+                        <span data-i18n="skills.consulting.s1">市场研究</span>
+                        <span data-i18n="skills.consulting.s2">战略诊断</span>
+                        <span data-i18n="skills.consulting.s3">财务建模</span>
+                        <span data-i18n="skills.consulting.s4">尽职调查</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--delay: 0.2s;">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 data-i18n="skills.tools.title">工具与软件</h3>
+                    <div class="skill-tags">
+                        <span>Excel <em>(Advanced)</em></span>
+                        <span>PowerPoint</span>
+                        <span>Python</span>
+                        <span>Wind</span>
+                        <span>Bloomberg</span>
+                        <span>Lightroom</span>
+                        <span>Photoshop</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--delay: 0.3s;">
+                    <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                    <h3 data-i18n="skills.languages.title">语言能力</h3>
+                    <div class="skill-lang">
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span class="lang-name" data-i18n="skills.languages.l1">中文（普通话）</span>
+                                <span class="lang-level" data-i18n="skills.languages.l1l">母语</span>
+                            </div>
+                            <div class="lang-bar">
+                                <div class="lang-bar-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span class="lang-name">English</span>
+                                <span class="lang-level">IELTS 7.5</span>
+                            </div>
+                            <div class="lang-bar">
+                                <div class="lang-bar-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span class="lang-name" data-i18n="skills.languages.l3">粤语</span>
+                                <span class="lang-level" data-i18n="skills.languages.l3l">初级</span>
+                            </div>
+                            <div class="lang-bar">
+                                <div class="lang-bar-fill" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span class="lang-name">日本語</span>
+                                <span class="lang-level" data-i18n="skills.languages.l4l">初级</span>
+                            </div>
+                            <div class="lang-bar">
+                                <div class="lang-bar-fill" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Leadership & Achievements Section
+         ============================================ -->
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">06</span>
+                <h2 data-i18n="achievements.title">荣誉与成就</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-grid reveal">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-content">
+                        <h4 data-i18n="achievements.a1">ESG商业策略大赛 Top 11 / 150+</h4>
+                        <p data-i18n="achievements.a1d">香港中文大学（深圳）</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                    <div class="achievement-content">
+                        <h4 data-i18n="achievements.a2">学生会"杰出干事"奖</h4>
+                        <p data-i18n="achievements.a2d">香港中文大学（深圳）</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                    <div class="achievement-content">
+                        <h4 data-i18n="achievements.a3">60周年校庆学生代表</h4>
+                        <p data-i18n="achievements.a3d">Top 1% 选拔</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Contact Section
+         ============================================ -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">07</span>
+                <h2 data-i18n="contact.title">联系我</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content reveal">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:1155237693@link.cuhk.edu.hk">1155237693@link.cuhk.edu.hk</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-text">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+85254863239">+852 5486 3239</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <span class="contact-label" data-i18n="contact.locationLabel">位置</span>
+                            <span data-i18n="contact.location">深圳 / 香港</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WeChat">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <div class="contact-cta-bg"></div>
+                    <p data-i18n="contact.cta">无论是商业合作、摄影约拍，还是只是想聊聊天，都欢迎联系我。</p>
+                    <a href="mailto:1155237693@link.cuhk.edu.hk" class="btn btn-primary">
+                        <span data-i18n="contact.sendEmail">发送邮件</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Footer
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">CT</div>
+                <p>&copy; 2026 陶承启 Oliver Tao. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#about" data-i18n="nav.about">关于</a>
+                    <span class="footer-divider">·</span>
+                    <a href="#experience" data-i18n="nav.experience">经历</a>
+                    <span class="footer-divider">·</span>
+                    <a href="#photography" data-i18n="nav.photography">摄影</a>
+                    <span class="footer-divider">·</span>
+                    <a href="#contact" data-i18n="nav.contact">联系</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
