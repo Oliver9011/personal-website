@@ -1,0 +1,141 @@
+{
+  "hero-1": {
+    "src": "images/DSC054310103.jpg",
+    "out": "images/opt/hero-1.webp",
+    "w": 1920,
+    "h": 2880,
+    "kb": 462,
+    "small": null
+  },
+  "hero-2": {
+    "src": "images/DSC05738-0111.JPG",
+    "out": "images/opt/hero-2.webp",
+    "w": 1920,
+    "h": 2880,
+    "kb": 656,
+    "small": null
+  },
+  "hero-3": {
+    "src": "images/DSC06555-0329.JPG",
+    "out": "images/opt/hero-3.webp",
+    "w": 1920,
+    "h": 1280,
+    "kb": 81,
+    "small": null
+  },
+  "hero-4": {
+    "src": "images/001-0429.JPG",
+    "out": "images/opt/hero-4.webp",
+    "w": 1920,
+    "h": 2880,
+    "kb": 819,
+    "small": null
+  },
+  "g1": {
+    "src": "images/DSC054310103.jpg",
+    "out": "images/opt/g1.webp",
+    "w": 1600,
+    "h": 2400,
+    "kb": 343,
+    "small": [
+      640,
+      960
+    ]
+  },
+  "g2": {
+    "src": "images/DSC05738-0111.JPG",
+    "out": "images/opt/g2.webp",
+    "w": 1600,
+    "h": 2400,
+    "kb": 526,
+    "small": [
+      640,
+      960
+    ]
+  },
+  "g3": {
+    "src": "images/DSC06555-0329.JPG",
+    "out": "images/opt/g3.webp",
+    "w": 1600,
+    "h": 1067,
+    "kb": 58,
+    "small": [
+      640,
+      427
+    ]
+  },
+  "g4": {
+    "src": "images/001-0429.JPG",
+    "out": "images/opt/g4.webp",
+    "w": 1600,
+    "h": 2400,
+    "kb": 443,
+    "small": [
+      640,
+      960
+    ]
+  },
+  "g5": {
+    "src": "images/DSC058110117.jpg",
+    "out": "images/opt/g5.webp",
+    "w": 1600,
+    "h": 2400,
+    "kb": 406,
+    "small": [
+      640,
+      960
+    ]
+  },
+  "g6": {
+    "src": "images/DSC061640301.jpg",
+    "out": "images/opt/g6.webp",
+    "w": 1600,
+    "h": 2400,
+    "kb": 449,
+    "small": [
+      640,
+      960
+    ]
+  },
+  "g7": {
+    "src": "images/DSC071650405.jpg",
+    "out": "images/opt/g7.webp",
+    "w": 1600,
+    "h": 1067,
+    "kb": 205,
+    "small": [
+      640,
+      427
+    ]
+  },
+  "g8": {
+    "src": "images/DSC073580406.jpg",
+    "out": "images/opt/g8.webp",
+    "w": 1600,
+    "h": 1067,
+    "kb": 230,
+    "small": [
+      640,
+      427
+    ]
+  },
+  "g9": {
+    "src": "images/DSC075070407.jpg",
+    "out": "images/opt/g9.webp",
+    "w": 1600,
+    "h": 1067,
+    "kb": 361,
+    "small": [
+      640,
+      427
+    ]
+  },
+  "portrait": {
+    "src": "个人照/953A0208.JPG",
+    "out": "images/opt/portrait.webp",
+    "w": 1000,
+    "h": 1500,
+    "kb": 26,
+    "small": null
+  }
+}

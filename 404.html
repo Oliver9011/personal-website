@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面不存在 | 陶承启 Oliver Tao</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --olive: #5c6b3f;
+            --olive-light: #7a8c5b;
+            --white: #f0efe8;
+            --gray: #888880;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 32px;
+        }
+        .wrap { max-width: 460px; }
+        .code {
+            font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+            font-size: 5rem;
+            font-weight: 600;
+            color: var(--olive);
+            line-height: 1;
+            letter-spacing: 2px;
+        }
+        h1 { font-size: 1.15rem; font-weight: 500; margin: 20px 0 10px; letter-spacing: 1px; }
+        p { font-size: 0.9rem; color: var(--gray); font-weight: 300; line-height: 1.8; }
+        a {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 12px 30px;
+            border: 1px solid var(--olive);
+            color: var(--olive-light);
+            text-decoration: none;
+            font-size: 0.82rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        a:hover { background: var(--olive); color: var(--white); }
+    </style>
+
+    <!-- 自托管字体：预载首屏关键切片，避免字体闪烁 -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/woff2/noto-serif-sc-normal-300+400+500+600+700-14.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/woff2/cormorant-garamond-normal-400+600+700-01.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/woff2/cormorant-garamond-italic-400-01.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/woff2/eb-garamond-normal-400+500+600-01.woff2">
+    <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="code">404</div>
+        <h1>这个页面不存在</h1>
+        <p>链接可能已失效，或者地址输错了。</p>
+        <a href="/">返回首页</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /events.html
+Disallow: /images/opt/_manifest.json
+
+Sitemap: https://oliver9011.github.io/personal-website/sitemap.xml

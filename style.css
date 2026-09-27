@@ -1,31 +1,46 @@
 /* ============================================
     Personal Website - Oliver Tao
-   Color Scheme: Black (#0a0a0a) & Olive Green (#5c6b3f, #7a8c5b)
-   Typography: Inter, Noto Sans SC, Playfair Display
+   Color Scheme: China Life Green (#003826) & Gold (#d8b059)
+   取自中国人寿海外 VI 与《代理人解析》演示稿
+   Typography: Cormorant Garamond (display), EB Garamond (body), Noto Serif SC (中文)
    ============================================ */
 
 /* CSS Variables */
 :root {
-    --black: #0a0a0a;
-    --black-2: #0f0f0f;
-    --black-3: #141414;
-    --black-4: #1a1a1a;
-    --dark: #1e1e1e;
-    --olive: #5c6b3f;
-    --olive-light: #7a8c5b;
-    --olive-dark: #4a5732;
-    --olive-glow: rgba(92, 107, 63, 0.25);
-    --olive-glow-soft: rgba(92, 107, 63, 0.08);
-    --white: #f0efe8;
-    --white-2: #e0dfd5;
-    --gray: #888880;
-    --gray-light: #b0afa5;
-    --gray-dark: #555550;
+    /* 深绿基底 —— 中国人寿标准绿 #003826 的明度阶梯 */
+    --black: #00251a;
+    --black-2: #002e20;
+    --black-3: #003826;
+    --black-4: #0a4231;
+    --dark: #104433;
+
+    /* 品牌强调金 —— 中国人寿数字与分隔线用色 #d8b059 */
+    --olive: #d8b059;
+    --olive-light: #e8ca85;
+    --olive-dark: #a8862f;
+    --olive-glow: rgba(216, 176, 89, 0.25);
+    --olive-glow-soft: rgba(216, 176, 89, 0.08);
+
+    /* 浅色板块 —— 中国人寿内页米白 #fcfaf8 */
+    --cream: #fcfaf8;
+    --cream-2: #f2efe7;
+    --ink: #003826;
+    --ink-2: #0d4a37;
+    --ink-soft: #4c6357;
+    --line-light: rgba(0, 56, 38, 0.14);
+
+    --white: #f7f5ef;
+    --white-2: #e6e2d5;
+    --gray: #93a89c;
+    --gray-light: #b6c4b9;
+    --gray-dark: #6d8177;
     --transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-fast: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-slow: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-serif: 'Playfair Display', Georgia, serif;
+    /* 拉丁衬线：Cormorant Garamond 用于大号展示，EB Garamond 用于正文（同门字体，气质一致）
+       中文统一 Noto Serif SC（思源宋体），与深绿 + 金的机构调性相配 */
+    --font-body: 'EB Garamond', 'Noto Serif SC', Georgia, 'Times New Roman', serif;
+    --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
 }
 
 /* ============================================
@@ -43,10 +58,12 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     background-color: var(--black);
     color: var(--white);
-    line-height: 1.7;
+    /* 衬线字 x-height 偏小，行高与字距需比无衬线放大一档 */
+    line-height: 1.85;
+    letter-spacing: 0.2px;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -116,11 +133,11 @@ img {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.92);
+    background: rgba(0, 30, 21, 0.92);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     padding: 14px 0;
-    border-bottom: 1px solid rgba(92, 107, 63, 0.1);
+    border-bottom: 1px solid rgba(216, 176, 89, 0.1);
 }
 
 .nav-container {
@@ -312,13 +329,19 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(10, 10, 10, 0.6) 0%,
-        rgba(10, 10, 10, 0.4) 40%,
-        rgba(10, 10, 10, 0.7) 70%,
-        rgba(10, 10, 10, 0.95) 100%
-    );
+    /* 中心暗角 + 纵向渐变：保证文字所在的中间区域始终有足够对比度 */
+    background:
+        radial-gradient(ellipse 78% 62% at 50% 46%,
+            rgba(0, 30, 21, 0.50) 0%,
+            rgba(0, 30, 21, 0.28) 58%,
+            rgba(0, 30, 21, 0) 100%),
+        linear-gradient(
+            to bottom,
+            rgba(0, 30, 21, 0.58) 0%,
+            rgba(0, 30, 21, 0.40) 38%,
+            rgba(0, 30, 21, 0.64) 72%,
+            rgba(0, 30, 21, 0.95) 100%
+        );
 }
 
 .hero-overlay {
@@ -344,7 +367,7 @@ img {
     right: -30%;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(92, 107, 63, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(216, 176, 89, 0.12) 0%, transparent 70%);
     pointer-events: none;
     z-index: 1;
 }
@@ -369,7 +392,7 @@ img {
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards 0.3s;
     backdrop-filter: blur(4px);
-    background: rgba(10, 10, 10, 0.3);
+    background: rgba(0, 30, 21, 0.3);
 }
 
 .hero-name {
@@ -399,11 +422,11 @@ img {
 }
 
 .hero-name-english {
-    font-family: var(--font-serif);
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.4vw, 2.3rem);
     font-weight: 400;
-    letter-spacing: 8px;
-    color: var(--gray-light);
+    letter-spacing: 4px;
+    color: var(--olive-light);
     font-style: italic;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards 0.7s;
@@ -413,20 +436,22 @@ img {
 .hero-tagline {
     font-size: clamp(1rem, 2vw, 1.3rem);
     font-weight: 300;
-    color: var(--gray);
+    color: var(--white-2);
     margin-bottom: 4px;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards 0.9s;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero-tagline-en {
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: 300;
-    color: var(--gray-dark);
+    color: var(--gray-light);
     font-style: italic;
     margin-bottom: 48px;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards 1.1s;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero-actions {
@@ -482,7 +507,7 @@ img {
     background: var(--olive-light);
     border-color: var(--olive-light);
     transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(92, 107, 63, 0.3);
+    box-shadow: 0 12px 40px rgba(216, 176, 89, 0.3);
 }
 
 .btn-primary i {
@@ -508,7 +533,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(92, 107, 63, 0.1);
+    background: rgba(216, 176, 89, 0.1);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s ease;
@@ -549,7 +574,7 @@ img {
     font-size: 0.6rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--gray);
+    color: var(--gray-light);
 }
 
 .scroll-line {
@@ -603,6 +628,186 @@ img {
     position: relative;
 }
 
+/* ============================================
+   Services Section
+   ============================================ */
+.services {
+    background: var(--black);
+    position: relative;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--olive-glow-soft), transparent);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--black-3);
+    padding: 40px 28px;
+    border: 1px solid rgba(216, 176, 89, 0.06);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--olive), var(--olive-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    border-color: rgba(216, 176, 89, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(216, 176, 89, 0.2);
+    border-radius: 50%;
+    font-size: 1.4rem;
+    color: var(--olive-light);
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    background: var(--olive);
+    color: var(--white);
+    border-color: var(--olive);
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.service-card p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/* ============================================
+   Why Me Section
+   ============================================ */
+.whyme {
+    background: var(--black-2);
+    position: relative;
+}
+
+.whyme::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--olive-glow-soft), transparent);
+}
+
+.whyme-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.whyme-card {
+    background: var(--black-3);
+    padding: 36px 24px;
+    border: 1px solid rgba(216, 176, 89, 0.06);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+}
+
+.whyme-card:hover {
+    border-color: rgba(216, 176, 89, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.whyme-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(216, 176, 89, 0.1);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--olive-light);
+    transition: var(--transition);
+}
+
+.whyme-card:hover .whyme-icon {
+    background: var(--olive);
+    color: var(--white);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.whyme-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.whyme-card p {
+    font-size: 0.82rem;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-grid,
+    .whyme-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid,
+    .whyme-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .section-header {
     display: flex;
     align-items: center;
@@ -616,7 +821,7 @@ img {
     letter-spacing: 3px;
     color: var(--olive);
     opacity: 0.5;
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
 }
 
 .section-header h2 {
@@ -676,7 +881,7 @@ img {
 
 .about-text p:first-child::first-letter {
     font-size: 3rem;
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
     color: var(--olive-light);
     float: left;
     margin-right: 12px;
@@ -689,7 +894,7 @@ img {
     gap: 48px;
     margin-top: 48px;
     padding-top: 32px;
-    border-top: 1px solid rgba(92, 107, 63, 0.1);
+    border-top: 1px solid rgba(216, 176, 89, 0.1);
 }
 
 .stat {
@@ -703,7 +908,7 @@ img {
     font-weight: 700;
     color: var(--olive-light);
     line-height: 1;
-    font-family: var(--font-serif);
+    font-family: var(--font-display);
 }
 
 .stat-plus {
@@ -850,7 +1055,7 @@ img {
     top: 0;
     bottom: 0;
     width: 1px;
-    background: linear-gradient(to bottom, var(--olive), rgba(92, 107, 63, 0.1));
+    background: linear-gradient(to bottom, var(--olive), rgba(216, 176, 89, 0.1));
 }
 
 .timeline-item {
@@ -871,27 +1076,27 @@ img {
     border-radius: 50%;
     background: var(--black);
     border: 2px solid var(--olive);
-    box-shadow: 0 0 0 4px rgba(92, 107, 63, 0.15);
+    box-shadow: 0 0 0 4px rgba(216, 176, 89, 0.15);
     z-index: 1;
     transition: var(--transition-fast);
 }
 
 .timeline-item:hover .timeline-dot {
     background: var(--olive);
-    box-shadow: 0 0 0 6px rgba(92, 107, 63, 0.2);
+    box-shadow: 0 0 0 6px rgba(216, 176, 89, 0.2);
 }
 
 .timeline-content {
     background: var(--black-2);
     padding: 32px;
-    border: 1px solid rgba(92, 107, 63, 0.08);
+    border: 1px solid rgba(216, 176, 89, 0.08);
     transition: var(--transition);
     position: relative;
     padding-left: 80px;
 }
 
 .timeline-content:hover {
-    border-color: rgba(92, 107, 63, 0.25);
+    border-color: rgba(216, 176, 89, 0.25);
     transform: translateX(8px);
     background: var(--black-3);
 }
@@ -965,7 +1170,7 @@ img {
 .exp-card {
     background: var(--black-3);
     padding: 36px;
-    border: 1px solid rgba(92, 107, 63, 0.06);
+    border: 1px solid rgba(216, 176, 89, 0.06);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -978,7 +1183,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(92, 107, 63, 0.03) 0%, transparent 50%);
+    background: linear-gradient(135deg, rgba(216, 176, 89, 0.03) 0%, transparent 50%);
     opacity: 0;
     transition: var(--transition);
 }
@@ -1000,7 +1205,7 @@ img {
 }
 
 .exp-card:hover {
-    border-color: rgba(92, 107, 63, 0.2);
+    border-color: rgba(216, 176, 89, 0.2);
     transform: translateY(-6px);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
@@ -1024,7 +1229,7 @@ img {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--olive-light);
-    border: 1px solid rgba(92, 107, 63, 0.2);
+    border: 1px solid rgba(216, 176, 89, 0.2);
     padding: 3px 10px;
     margin-bottom: 10px;
     border-radius: 1px;
@@ -1099,7 +1304,7 @@ img {
 
 .filter-btn {
     background: transparent;
-    border: 1px solid rgba(92, 107, 63, 0.15);
+    border: 1px solid rgba(216, 176, 89, 0.15);
     color: var(--gray);
     padding: 8px 24px;
     font-size: 0.75rem;
@@ -1241,7 +1446,7 @@ img {
     max-width: 100%;
     max-height: 80vh;
     object-fit: contain;
-    border: 1px solid rgba(92, 107, 63, 0.1);
+    border: 1px solid rgba(216, 176, 89, 0.1);
 }
 
 .lightbox-caption {
@@ -1295,7 +1500,7 @@ img {
 }
 
 .lightbox-nav:hover {
-    background: rgba(92, 107, 63, 0.2);
+    background: rgba(216, 176, 89, 0.2);
     border-color: var(--olive);
     opacity: 1;
 }
@@ -1335,12 +1540,12 @@ img {
 .skill-category {
     background: var(--black-3);
     padding: 36px;
-    border: 1px solid rgba(92, 107, 63, 0.06);
+    border: 1px solid rgba(216, 176, 89, 0.06);
     transition: var(--transition);
 }
 
 .skill-category:hover {
-    border-color: rgba(92, 107, 63, 0.2);
+    border-color: rgba(216, 176, 89, 0.2);
     transform: translateY(-4px);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
@@ -1360,7 +1565,7 @@ img {
     color: var(--olive-light);
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 1px solid rgba(92, 107, 63, 0.12);
+    border-bottom: 1px solid rgba(216, 176, 89, 0.12);
 }
 
 .skill-tags {
@@ -1373,7 +1578,7 @@ img {
     font-size: 0.8rem;
     color: var(--gray-light);
     padding: 6px 16px;
-    border: 1px solid rgba(92, 107, 63, 0.12);
+    border: 1px solid rgba(216, 176, 89, 0.12);
     transition: var(--transition-fast);
     border-radius: 1px;
 }
@@ -1381,7 +1586,7 @@ img {
 .skill-tags span:hover {
     border-color: var(--olive);
     color: var(--olive-light);
-    background: rgba(92, 107, 63, 0.05);
+    background: rgba(216, 176, 89, 0.05);
 }
 
 .skill-tags span em {
@@ -1447,10 +1652,17 @@ img {
     gap: 24px;
 }
 
+/* 荣誉网格现位于「技能与荣誉」板块内 */
+.skills .achievements-grid {
+    margin-top: 64px;
+    padding-top: 56px;
+    border-top: 1px solid rgba(216, 176, 89, 0.1);
+}
+
 .achievement-card {
     background: var(--black-2);
     padding: 32px;
-    border: 1px solid rgba(92, 107, 63, 0.06);
+    border: 1px solid rgba(216, 176, 89, 0.06);
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -1458,7 +1670,7 @@ img {
 }
 
 .achievement-card:hover {
-    border-color: rgba(92, 107, 63, 0.2);
+    border-color: rgba(216, 176, 89, 0.2);
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
@@ -1470,7 +1682,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(92, 107, 63, 0.15);
+    border: 1px solid rgba(216, 176, 89, 0.15);
     color: var(--olive-light);
     font-size: 1.1rem;
     transition: var(--transition-fast);
@@ -1539,7 +1751,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(92, 107, 63, 0.12);
+    border: 1px solid rgba(216, 176, 89, 0.12);
     color: var(--olive-light);
     font-size: 1.1rem;
     transition: var(--transition-fast);
@@ -1547,7 +1759,7 @@ img {
 
 .contact-item:hover .contact-icon {
     border-color: var(--olive);
-    background: rgba(92, 107, 63, 0.05);
+    background: rgba(216, 176, 89, 0.05);
 }
 
 .contact-text {
@@ -1587,7 +1799,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(92, 107, 63, 0.15);
+    border: 1px solid rgba(216, 176, 89, 0.15);
     color: var(--gray-light);
     transition: var(--transition-fast);
     font-size: 1rem;
@@ -1597,14 +1809,22 @@ img {
 .social-link:hover {
     border-color: var(--olive);
     color: var(--olive-light);
-    background: rgba(92, 107, 63, 0.05);
+    background: rgba(216, 176, 89, 0.05);
     transform: translateY(-3px);
+}
+
+.contact-note {
+    margin-top: 16px;
+    font-size: 0.75rem;
+    color: var(--gray);
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .contact-cta {
     position: relative;
     padding: 48px;
-    border: 1px solid rgba(92, 107, 63, 0.1);
+    border: 1px solid rgba(216, 176, 89, 0.1);
     overflow: hidden;
 }
 
@@ -1614,7 +1834,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 30% 50%, rgba(92, 107, 63, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at 30% 50%, rgba(216, 176, 89, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -1638,7 +1858,7 @@ img {
    ============================================ */
 .footer {
     padding: 48px 0;
-    border-top: 1px solid rgba(92, 107, 63, 0.06);
+    border-top: 1px solid rgba(216, 176, 89, 0.06);
     background: var(--black);
 }
 
@@ -1772,7 +1992,7 @@ img {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(10, 10, 10, 0.98);
+        background: rgba(0, 30, 21, 0.98);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -1992,4 +2212,286 @@ img {
         background: white;
         color: black;
     }
+}
+
+/* ============================================
+   浅色板块 —— 仿中国人寿内页版式
+   米白底 #fcfaf8 + 深绿字 #003826 + 金色点缀
+   ============================================ */
+.section--light {
+    background: var(--cream);
+    color: var(--ink);
+}
+
+.section--light .section-number {
+    color: var(--olive-dark);
+    opacity: 0.9;
+}
+
+.section--light .section-line {
+    background: linear-gradient(to right, var(--olive-dark), rgba(168, 134, 47, 0));
+}
+
+.section--light .section-subtitle {
+    color: var(--ink-soft);
+}
+
+/* ---- 关于我 ---- */
+.section--light .about-stats {
+    border-top: 1px solid var(--line-light);
+}
+
+.section--light .stat-number {
+    color: var(--olive-dark);
+}
+
+.section--light .stat-label {
+    color: var(--ink-soft);
+}
+
+.section--light .image-frame-border {
+    border-color: var(--olive-dark);
+}
+
+.section--light .image-frame-corner {
+    border-color: var(--olive-dark);
+}
+
+.section--light .about-image-badge {
+    background: var(--ink);
+    border-color: var(--olive);
+    color: var(--cream);
+}
+
+/* ---- 工作经历 ---- */
+.section--light .exp-card {
+    background: #ffffff;
+    border: 1px solid var(--line-light);
+    box-shadow: 0 1px 2px rgba(0, 56, 38, 0.04);
+}
+
+.section--light .exp-card:hover {
+    border-color: rgba(168, 134, 47, 0.45);
+    box-shadow: 0 6px 24px rgba(0, 56, 38, 0.08);
+}
+
+.section--light .exp-card:hover .exp-company h3 {
+    color: var(--olive-dark);
+}
+
+.section--light .exp-card:hover .exp-details li::before {
+    color: var(--olive-dark);
+    opacity: 0.7;
+}
+
+.section--light .exp-tag {
+    color: var(--olive-dark);
+    border-color: rgba(168, 134, 47, 0.4);
+}
+
+.section--light .exp-role {
+    color: var(--ink-soft);
+}
+
+.section--light .exp-date {
+    color: var(--ink-soft);
+    border-color: var(--line-light);
+}
+
+.section--light .exp-details li {
+    color: var(--ink-soft);
+}
+
+.section--light .exp-details li::before {
+    color: var(--olive-dark);
+}
+
+/* ---- 教育背景 ---- */
+.section--light .timeline-content {
+    background: #ffffff;
+    border: 1px solid var(--line-light);
+    box-shadow: 0 1px 2px rgba(0, 56, 38, 0.04);
+}
+
+.section--light .timeline-content h3 {
+    color: var(--ink);
+}
+
+.section--light .timeline-date {
+    color: var(--olive-dark);
+}
+
+.section--light .timeline-sub {
+    color: var(--ink-2);
+}
+
+.section--light .timeline-desc {
+    color: var(--ink-soft);
+}
+
+.section--light .timeline-desc.exchange {
+    color: var(--olive-dark);
+}
+
+.section--light .timeline-dot {
+    background: var(--cream);
+    border-color: var(--olive-dark);
+    box-shadow: 0 0 0 4px rgba(168, 134, 47, 0.18);
+}
+
+.section--light .timeline-item:hover .timeline-dot {
+    background: var(--olive-dark);
+}
+
+.section--light .timeline-icon {
+    color: var(--olive-dark);
+    opacity: 0.75;
+}
+
+/* ---- 技能与荣誉 ---- */
+.section--light .skill-category {
+    background: #ffffff;
+    border: 1px solid var(--line-light);
+    box-shadow: 0 1px 2px rgba(0, 56, 38, 0.04);
+}
+
+.section--light .skill-category:hover {
+    border-color: rgba(168, 134, 47, 0.45);
+}
+
+.section--light .skill-icon {
+    color: var(--olive-dark);
+    opacity: 1;
+}
+
+.section--light .skill-category h3 {
+    color: var(--ink);
+}
+
+.section--light .skill-tags span {
+    color: var(--ink-soft);
+    border-color: var(--line-light);
+}
+
+.section--light .skill-tags span:hover {
+    border-color: rgba(168, 134, 47, 0.5);
+    color: var(--ink);
+}
+
+.section--light .lang-name {
+    color: var(--ink);
+}
+
+.section--light .lang-level {
+    color: var(--ink-soft);
+}
+
+.section--light .lang-bar {
+    background: rgba(0, 56, 38, 0.1);
+}
+
+.section--light .achievements-grid {
+    border-top: 1px solid var(--line-light);
+}
+
+.section--light .achievement-card {
+    background: #ffffff;
+    border: 1px solid var(--line-light);
+    box-shadow: 0 1px 2px rgba(0, 56, 38, 0.04);
+}
+
+.section--light .achievement-card:hover {
+    border-color: rgba(168, 134, 47, 0.45);
+}
+
+.section--light .achievement-icon {
+    color: var(--olive-dark);
+}
+
+.section--light .achievement-content h4 {
+    color: var(--ink);
+}
+
+.section--light .achievement-content p {
+    color: var(--ink-soft);
+}
+
+/* ============================================
+   现任机构条 —— 仿中国人寿证件徽标行
+   ============================================ */
+.hero-credentials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 1.5s;
+}
+
+.hero-credentials span {
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    padding: 7px 16px;
+    color: var(--white-2);
+    border: 1px solid rgba(216, 176, 89, 0.28);
+    background: rgba(0, 56, 38, 0.35);
+    backdrop-filter: blur(6px);
+    border-radius: 1px;
+}
+
+.hero-credentials span.cred-gold {
+    color: var(--olive-light);
+    border-color: rgba(216, 176, 89, 0.5);
+}
+
+/* ============================================
+   微信二维码
+   ============================================ */
+.contact-qr {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid rgba(216, 176, 89, 0.2);
+    background: rgba(0, 56, 38, 0.4);
+    max-width: 340px;
+}
+
+.contact-qr img {
+    width: 96px;
+    height: 96px;
+    display: block;
+    background: #fff;
+    padding: 4px;
+}
+
+.contact-qr-text .label {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--olive-light);
+    margin-bottom: 6px;
+}
+
+.contact-qr-text .value {
+    font-size: 0.82rem;
+    color: var(--white-2);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .contact-qr { max-width: none; }
+    .hero-credentials { gap: 8px; }
+    .hero-credentials span { font-size: 0.62rem; padding: 6px 12px; letter-spacing: 1px; }
+}
+
+.footer-tagline {
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    color: var(--olive);
+    margin-bottom: 10px;
+    font-weight: 300;
 }

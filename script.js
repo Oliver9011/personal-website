@@ -1,7 +1,7 @@
 /* ============================================
-    Personal Website - Oliver Tao
+   Personal Website - Oliver Tao
    Interactive Features & i18n
-   Version: 2.0 - Premium Design
+   Version: 3.0
    ============================================ */
 
 // ============================================
@@ -12,238 +12,360 @@ const i18n = {
         nav: {
             about: '关于',
             experience: '经历',
+            education: '教育',
+            focus: '方向',
             photography: '摄影',
             contact: '联系'
         },
         hero: {
-            badge: '市场营销 · 摄影',
-            tagline: '理性分析世界，镜头记录温度',
-            taglineEn: 'Analyze with reason, capture with warmth.',
-            explore: '探索更多',
+            badge: 'WEALTH PLANNING ADVISOR · PHOTOGRAPHER',
+            tagline: '以专业守护财富，以温度传承价值',
+            taglineEn: 'Guard wealth with expertise, pass on value with warmth.',
+            explore: '了解我',
             contact: '联系我',
-            scroll: '向下滚动'
+            scroll: '向下滚动',
+            cred1: '诺贝尔家族办公室',
+            cred2: '中国人寿（海外）',
+            cred3: '香港中文大学 硕士'
         },
         about: {
             title: '关于我',
-            p1: '我是陶承启，香港中文大学市场营销理学硕士在读，本科毕业于香港中文大学（深圳）环球商务管理专业。我热衷于将数据分析与商业洞察相结合，在金融、咨询领域积累了丰富的实战经验。',
-            p2: '同时，我也是一名摄影师。镜头是我观察世界的另一双眼睛——从城市街角到自然风光，从人像情绪到建筑几何，我始终相信，好的影像能传递超越语言的力量。',
-            stat1: '实习经历',
-            stat2: '摄影城市',
-            stat3: '语言能力',
-            photoBadge: '摄影师 · 2026'
+            p1: '我是陶承启，现居香港，任财富规划顾问，主要服务跨境家庭的财富安排。本科毕业于香港中文大学（深圳）环球商务管理专业，硕士毕业于香港中文大学市场营销专业。求学期间曾在加拿大麦克马斯特大学学习一年，并在比利时鲁汶大学交换。',
+            p2: '我的经历集中在四个方向：在开源证券电子组做卖方研究，搭建估值模型、撰写行业报告；在佛山医药健康创投做买方投资，分析并购标的、参与尽职调查；在科特勒咨询做战略项目，做竞争对标与客户细分；在方德证券私人财富管理团队，协助高净值客户梳理资产配置。卖方、买方、咨询、财富管理四个位置都待过，让我习惯从不同视角看同一件事。',
+            p3: '我目前在诺贝尔家族办公室担任财富规划顾问，同时是中国人寿（海外）的理财顾问。我关注的是跨境家庭的财富结构——身处内地与香港之间，家庭往往要同时面对两套规则、两种货币、两代人的安排。这类问题很难靠单一产品解决，需要先把结构理清楚。我做的事，是从研究出发，把这些变量摊开来看。',
+            p4: '同时，我也是一名摄影师。我曾担任香港中文大学（深圳）官方摄影师，为学校传讯与公共关系办公室拍摄国庆升旗、校领导采访等重大活动，作品见于学校官网及官方推文。四年镜头训练教会我的是：先观察，再判断。真正的信息往往藏在别人跳过的细节里——这一点，做研究和看家庭资产是相通的。',
+            stat1: '段金融经历',
+            stat2: '并购项目分析',
+            stat3: '地求学经历',
+            stat4: '年校园影像',
+            photoBadge: '财富规划顾问 · 香港'
+        },
+        experience: {
+            title: '工作经历',
+            forthright: {
+                company: '方德证券股份有限公司',
+                role: '私人财富管理实习生',
+                tag: '私人财富',
+                date: '2026.01 – 2026.03 · 香港',
+                d1: '协助高级客户经理为客户提供投资咨询与财富管理解决方案',
+                d2: '开展市场研究并生成投资见解，根据客户风险偏好与目标制定资产配置策略',
+                d3: '准备专业的客户演示材料、投资组合回顾及投资建议报告'
+            },
+            foshan: {
+                company: '佛山市医药健康创业投资管理有限公司',
+                role: '投资实习生',
+                tag: '股权投资',
+                date: '2024.09 – 2024.12 · 深圳',
+                d1: '负责 20+ 医药并购项目的财务分析与估值',
+                d2: '进行尽职调查并协助编写投资方案，提高决策效率约 15%',
+                d3: '与勤智资本等合作伙伴开展风险回报分析，制定基金策略'
+            },
+            kotler: {
+                company: '深圳科特勒营销管理有限公司',
+                role: '咨询顾问实习生',
+                tag: '战略咨询',
+                date: '2024.05 · 深圳',
+                d1: '参与房地产客户高端市场拓展战略项目，负责竞争对标与客户细分',
+                d2: '分析市场差异化要素并提出三项关键战略建议，提升客户品牌定位',
+                d3: '协助制定战略方案，支持高层决策执行'
+            },
+            kaiyuan: {
+                company: '开源证券股份有限公司',
+                role: '电子组研究实习生',
+                tag: '卖方研究',
+                date: '2024.02 – 2024.05 · 深圳',
+                d1: '搭建 DCF 与可比公司估值模型，对 A 股半导体企业进行估值分析',
+                d2: '撰写 5+ 行业研究报告，为投资决策提供数据支持与建议',
+                d3: '管理并分析 200+ 行业数据，提高研究数据的准确性与完整性'
+            }
         },
         education: {
             title: '教育背景',
             cuhk: {
                 title: '香港中文大学',
-                degree: '市场营销理学硕士',
-                desc: '香港 · 主修：战略管理、财务决策、数据分析'
+                degree: '市场营销理学硕士 · 香港',
+                date: '2025.09 – 2026.06',
+                desc: 'QS 全球前 50 大学，商学院 · 主要课程：公司金融、财务管理、战略营销'
             },
             cuhksz: {
                 title: '香港中文大学（深圳）',
-                degree: '环球商务管理学士',
-                desc: '深圳 · GPA前15% · 校庆学生代表（Top 1%）',
-                exchange: '交换：鲁汶大学（比利时，全球Top 50）'
+                degree: '环球商务管理学士 · 深圳',
+                date: '2021.09 – 2025.06',
+                desc: '荣誉：受邀担任港中大六十周年学生代表（全校 60 人）',
+                exchange: '交换：比利时鲁汶大学（全球前 50）· 海外学习：加拿大麦克马斯特大学（GPA 年级前 15%）'
             }
         },
-        experience: {
-            title: '工作经历',
-            forthright: {
-                company: '方德证券',
-                role: '私人财富管理实习生',
-                tag: '私人财富',
-                d1: '协助高级客户经理为客户提供投资咨询与财富解决方案',
-                d2: '进行市场研究，制定与客户风险偏好一致的资产配置策略',
-                d3: '准备专业客户演示、投资组合审查及投资建议材料'
+        focus: {
+            title: '专业方向',
+            subtitle: '先理解一个家庭的结构，再谈具体的安排。',
+            f1: {
+                title: '跨境家庭财富结构',
+                desc: '理解内地与香港两地规则差异，协助梳理家庭资产的整体结构与持有方式'
             },
-            foshan: {
-                company: '佛山医药健康创投',
-                role: '投资分析实习生',
-                tag: '风险投资',
-                d1: '对生物科技初创企业进行行业格局分析，评估20+并购标的',
-                d2: '协助投资经理进行财务建模、尽职调查与风险收益分析',
-                d3: '撰写投资报告，提升决策效率15%'
+            f2: {
+                title: '传承与家族治理',
+                desc: '关注代际交接中的安排逻辑与常见问题，把模糊的家事变成可讨论的议题'
             },
-            kotler: {
-                company: '科特勒咨询集团',
-                role: '咨询实习生',
-                tag: '战略咨询',
-                d1: '为房地产客户提供高端高尔夫客群市场进入战略支持',
-                d2: '进行竞争对标与客户细分，识别三大关键市场差异化因素',
-                d3: '提供可执行建议以优化客户定位与收入潜力'
+            f3: {
+                title: '风险管理框架',
+                desc: '从家庭整体风险敞口出发，识别薄弱环节，而非从单一产品视角切入'
             },
-            kaiyuan: {
-                company: '开源证券',
-                role: '研究实习生（电子组）',
-                tag: '行业研究',
-                d1: '分析半导体及元器件行业趋势与价值链',
-                d2: '建立DCF与可比公司模型，撰写5+研究报告',
-                d3: '与分析师协作提供可执行洞察，提升客户覆盖深度'
+            f4: {
+                title: '身份与教育规划',
+                desc: '跨境生活安排与子女教育路径的信息梳理，帮助家庭看清可选范围'
             }
+        },
+        whyme: {
+            title: '为什么选择我',
+            w1: {
+                title: '跨市场视角',
+                desc: '在深圳、香港、加拿大三地学习生活过，理解不同市场的规则差异与家庭结构差异'
+            },
+            w2: {
+                title: '四段金融经历',
+                desc: '卖方研究、买方投资、战略咨询、私人财富管理，看问题的角度不单一'
+            },
+            w3: {
+                title: '研究驱动',
+                desc: '会建模、会读财报、会做尽调——结论有推导过程，而不是话术'
+            },
+            w4: {
+                title: '长期主义',
+                desc: '不追求一次性成交，愿意花时间先成为那个你愿意长期问问题的人'
+            }
+        },
+        skills: {
+            title: '技能与荣誉',
+            professional: {
+                title: '专业能力',
+                s1: '估值分析（DCF · 可比公司法）',
+                s2: '财务建模',
+                s3: '并购尽调',
+                s4: '市场研究',
+                s5: '数据分析'
+            },
+            tools: {
+                title: '工具'
+            },
+            languages: {
+                title: '语言',
+                l1: '中文（普通话）',
+                l1l: '母语',
+                l2: 'English',
+                l3: '粤语',
+                l3l: '初级',
+                l4: '日本語',
+                l4l: '初级'
+            }
+        },
+        achievements: {
+            a1: 'ESG 商业策略大赛 前 11 名 / 150+ 队',
+            a1d: '香港中文大学（深圳）',
+            a2: '学生会「杰出干事」奖',
+            a2d: '香港中文大学（深圳）',
+            a3: '港中大六十周年学生代表',
+            a3d: '全校 60 人'
         },
         photography: {
             title: '摄影作品',
             subtitle: '用镜头捕捉世界的温度与质感',
             filterAll: '全部',
-            filterLandscape: '风光',
             filterCity: '城市',
-            filterNature: '自然'
-        },
-        skills: {
-            title: '技能与证书',
-            consulting: {
-                title: '咨询与分析',
-                s1: '市场研究',
-                s2: '战略诊断',
-                s3: '财务建模',
-                s4: '尽职调查'
-            },
-            tools: {
-                title: '工具与软件'
-            },
-            languages: {
-                title: '语言能力',
-                l1: '中文（普通话）',
-                l1l: '母语',
-                l3: '粤语',
-                l3l: '初级',
-                l4l: '初级'
-            }
-        },
-        achievements: {
-            title: '荣誉与成就',
-            a1: 'ESG商业策略大赛 Top 11 / 150+',
-            a1d: '香港中文大学（深圳）',
-            a2: '学生会"杰出干事"奖',
-            a2d: '香港中文大学（深圳）',
-            a3: '60周年校庆学生代表',
-            a3d: 'Top 1% 选拔'
+            filterLandscape: '风光',
+            filterDetail: '细节'
         },
         contact: {
             title: '联系我',
-            locationLabel: '位置',
-            location: '深圳 / 香港',
-            cta: '无论是商业合作、摄影约拍，还是只是想聊聊天，都欢迎联系我。',
+            phoneLabel: '手机',
+            locationLabel: '常驻',
+            location: '香港 / 深圳',
+            qrLabel: 'WeChat 微信',
+            qrValue: '扫码添加，或搜索手机号',
+            cta: '无论是想聊聊跨境家庭的财富安排、摄影合作，还是只是认识一下，都欢迎联系我。',
             sendEmail: '发送邮件'
+        },
+        footer: {
+            tagline: '立足香港 · 深耕跨境 · 长期陪伴'
         }
     },
     en: {
         nav: {
             about: 'About',
             experience: 'Experience',
+            education: 'Education',
+            focus: 'Focus',
             photography: 'Photography',
             contact: 'Contact'
         },
         hero: {
-            badge: 'MARKETING · PHOTOGRAPHY',
-            tagline: '理性分析世界，镜头记录温度',
-            taglineEn: 'Analyze with reason, capture with warmth.',
-            explore: 'Explore More',
+            badge: 'WEALTH PLANNING ADVISOR · PHOTOGRAPHER',
+            tagline: '以专业守护财富，以温度传承价值',
+            taglineEn: 'Guard wealth with expertise, pass on value with warmth.',
+            explore: 'About Me',
             contact: 'Get in Touch',
-            scroll: 'Scroll Down'
+            scroll: 'Scroll Down',
+            cred1: 'Nobel Family Office',
+            cred2: 'China Life (Overseas)',
+            cred3: 'CUHK Master'
         },
         about: {
             title: 'About Me',
-            p1: 'I am Oliver Tao, an MSc in Marketing candidate at The Chinese University of Hong Kong, and a BBA graduate in Global Business Studies from CUHK (Shenzhen). I am passionate about combining data analytics with business insights, with hands-on experience in finance and consulting.',
-            p2: 'I am also a photographer. The lens is my second pair of eyes to observe the world — from urban street corners to natural landscapes, from portrait emotions to architectural geometry. I firmly believe that great images convey power beyond words.',
-            stat1: 'Internships',
-            stat2: 'Cities Shot',
-            stat3: 'Languages',
-            photoBadge: 'Photographer · 2026'
+            p1: 'I am Oliver Tao, based in Hong Kong and working as a wealth planning advisor, focused on the wealth arrangements of cross-border families. I hold a BBA in Global Business Studies from The Chinese University of Hong Kong, Shenzhen, and an MSc in Marketing from The Chinese University of Hong Kong. I also spent a year at McMaster University in Canada and an exchange term at KU Leuven in Belgium.',
+            p2: 'My experience spans four directions: sell-side research at Kaiyuan Securities, where I built valuation models and wrote industry reports; buy-side investing at a healthcare-focused VC in Foshan, analysing M&A targets and supporting due diligence; strategy consulting at Kotler, covering competitive benchmarking and client segmentation; and private wealth management at Forthright Securities, supporting HNW clients with asset allocation. Having sat in all four seats, I am used to looking at the same question from more than one angle.',
+            p3: 'I currently serve as a wealth planning advisor at Nobel Family Office, and as a financial advisor with China Life (Overseas). My focus is the wealth structure of cross-border families. Living between the Mainland and Hong Kong, a family often has to deal with two sets of rules, two currencies, and two generations of arrangements at once. Problems like these rarely have a single-product answer — the structure has to be understood first. That is what I do: start from research, and lay the variables out in the open.',
+            p4: 'I am also a photographer. I served as an official photographer for CUHK (Shenzhen), covering major events such as National Day flag-raising ceremonies and leadership interviews for the Communications and Public Relations Office, with my work featured on the university website and official posts. Four years behind a lens taught me to observe first and judge second — real information tends to hide in the details other people skip. The same holds true for research, and for reading a family\'s balance sheet.',
+            stat1: 'Finance Roles',
+            stat2: 'M&A Projects',
+            stat3: 'Study Locations',
+            stat4: 'Years in Media',
+            photoBadge: 'Wealth Planning Advisor · Hong Kong'
+        },
+        experience: {
+            title: 'Experience',
+            forthright: {
+                company: 'Forthright Securities Co., Ltd.',
+                role: 'Private Wealth Management Intern',
+                tag: 'Private Wealth',
+                date: 'Jan – Mar 2026 · Hong Kong',
+                d1: 'Supported senior relationship managers in delivering investment advisory and wealth management solutions.',
+                d2: 'Conducted market research and produced investment views; built asset allocation strategies aligned with client risk profiles and objectives.',
+                d3: 'Prepared client presentations, portfolio reviews, and detailed investment recommendation reports.'
+            },
+            foshan: {
+                company: 'Foshan Medical & Healthcare Venture Capital',
+                role: 'Investment Intern',
+                tag: 'Private Equity',
+                date: 'Sep – Dec 2024 · Shenzhen',
+                d1: 'Led financial analysis and valuation for 20+ healthcare M&A projects.',
+                d2: 'Conducted due diligence and co-authored investment proposals, improving decision efficiency by ~15%.',
+                d3: 'Worked with partners including Qianzhi Capital on risk-return analysis and fund strategy.'
+            },
+            kotler: {
+                company: 'Kotler Marketing Group (Shenzhen)',
+                role: 'Consulting Intern',
+                tag: 'Strategy Consulting',
+                date: 'May 2024 · Shenzhen',
+                d1: 'Contributed to a premium market expansion strategy project for a real estate client, owning competitive benchmarking and client segmentation.',
+                d2: 'Identified three key market differentiators and recommended positioning improvements.',
+                d3: 'Helped shape the strategic plan in support of senior management decisions.'
+            },
+            kaiyuan: {
+                company: 'Kaiyuan Securities Co., Ltd.',
+                role: 'Research Intern (Electronics)',
+                tag: 'Sell-side Research',
+                date: 'Feb – May 2024 · Shenzhen',
+                d1: 'Built DCF and comparable company valuation models for A-share semiconductor companies.',
+                d2: 'Authored 5+ industry research reports supporting investment decisions.',
+                d3: 'Managed and analysed 200+ industry data points, improving research accuracy and completeness.'
+            }
         },
         education: {
             title: 'Education',
             cuhk: {
                 title: 'The Chinese University of Hong Kong',
-                degree: 'MSc in Marketing',
-                desc: 'Hong Kong · Strategic Management, Financial Decision-Making, Data Analytics'
+                degree: 'MSc in Marketing · Hong Kong',
+                date: 'Sep 2025 – Jun 2026',
+                desc: 'QS Top 50 university, Business School · Key courses: Corporate Finance, Financial Management, Strategic Marketing'
             },
             cuhksz: {
                 title: 'CUHK (Shenzhen)',
-                degree: 'BBA in Global Business Studies',
-                desc: 'Shenzhen · GPA Top 15% · 60th Anniversary Student Rep (Top 1%)',
-                exchange: 'Exchange: KU Leuven (Global Top 50, Belgium)'
+                degree: 'BBA in Global Business Studies · Shenzhen',
+                date: 'Sep 2021 – Jun 2025',
+                desc: 'Honour: Invited as a CUHK 60th Anniversary Student Representative (60 students university-wide)',
+                exchange: 'Exchange: KU Leuven, Belgium (Global Top 50) · Overseas study: McMaster University, Canada (GPA top 15% of year)'
             }
         },
-        experience: {
-            title: 'Experience',
-            forthright: {
-                company: 'Forthright Securities',
-                role: 'Private Wealth Management Intern',
-                tag: 'Private Wealth',
-                d1: 'Supported senior relationship managers in delivering investment advisory and wealth solutions.',
-                d2: 'Conducted market research and formulated asset allocation strategies aligned with client risk profiles.',
-                d3: 'Prepared professional client presentations, portfolio reviews, and investment recommendation materials.'
+        focus: {
+            title: 'Focus Areas',
+            subtitle: 'Understand a family\'s structure first, then talk about specific arrangements.',
+            f1: {
+                title: 'Cross-Border Wealth Structure',
+                desc: 'Understanding the rule differences between the Mainland and Hong Kong, and helping map the overall structure and holding arrangements of family assets'
             },
-            foshan: {
-                company: 'Foshan Medical & Healthcare VC',
-                role: 'Investment Analyst Intern',
-                tag: 'Venture Capital',
-                d1: 'Conducted industry landscape analysis on biotech startups and evaluated 20+ M&A candidates.',
-                d2: 'Supported investment managers with financial modeling, due diligence, and risk-return analysis.',
-                d3: 'Delivered investment reports that enhanced decision efficiency by 15%.'
+            f2: {
+                title: 'Succession & Family Governance',
+                desc: 'Focusing on the logic and common pitfalls of generational handover, turning vague family matters into discussable questions'
             },
-            kotler: {
-                company: 'Kotler Marketing Group',
-                role: 'Consulting Intern',
-                tag: 'Strategy Consulting',
-                d1: 'Supported strategic market entry project for a real estate client targeting high-end golf customers.',
-                d2: 'Conducted competitive benchmarking and client segmentation, identifying three key differentiators.',
-                d3: 'Delivered actionable recommendations to optimize client positioning and revenue potential.'
+            f3: {
+                title: 'Risk Management Framework',
+                desc: 'Starting from the family\'s overall risk exposure to identify weak points, rather than from a single-product angle'
             },
-            kaiyuan: {
-                company: 'Kaiyuan Securities',
-                role: 'Research Intern (Electronics)',
-                tag: 'Industry Research',
-                d1: 'Analyzed industry trends and value chains in semiconductor and component sectors.',
-                d2: 'Developed DCF and comparable company models; drafted 5+ research reports.',
-                d3: 'Collaborated with analysts to present actionable insights improving client coverage depth.'
+            f4: {
+                title: 'Identity & Education Planning',
+                desc: 'Clarifying cross-border living arrangements and children\'s education pathways, so families can see their real options'
             }
         },
-        photography: {
-            title: 'Photography',
-            subtitle: 'Capturing the warmth and texture of the world through the lens',
-            filterAll: 'All',
-            filterLandscape: 'Landscape',
-            filterCity: 'City',
-            filterNature: 'Nature'
+        whyme: {
+            title: 'Why Work With Me',
+            w1: {
+                title: 'Cross-Market Perspective',
+                desc: 'Studied and lived in Shenzhen, Hong Kong, and Canada — I understand how rules and family structures differ across markets'
+            },
+            w2: {
+                title: 'Four Finance Roles',
+                desc: 'Sell-side research, buy-side investing, strategy consulting, and private wealth management — more than one lens on the same problem'
+            },
+            w3: {
+                title: 'Research-Driven',
+                desc: 'I build models, read financial statements, and run due diligence — conclusions come with a derivation, not a pitch'
+            },
+            w4: {
+                title: 'Long-Term Mindset',
+                desc: 'Not chasing a one-off transaction — I would rather become the person you keep asking questions of, for years'
+            }
         },
         skills: {
-            title: 'Skills & Certifications',
-            consulting: {
-                title: 'Consulting & Analysis',
-                s1: 'Market Research',
-                s2: 'Strategic Diagnosis',
-                s3: 'Financial Modeling',
-                s4: 'Due Diligence'
+            title: 'Skills & Honours',
+            professional: {
+                title: 'Professional Skills',
+                s1: 'Valuation (DCF · Comps)',
+                s2: 'Financial Modeling',
+                s3: 'M&A Due Diligence',
+                s4: 'Market Research',
+                s5: 'Data Analysis'
             },
             tools: {
-                title: 'Tools & Software'
+                title: 'Tools'
             },
             languages: {
                 title: 'Languages',
                 l1: 'Mandarin Chinese',
                 l1l: 'Native',
+                l2: 'English',
                 l3: 'Cantonese',
                 l3l: 'Beginner',
+                l4: 'Japanese',
                 l4l: 'Beginner'
             }
         },
         achievements: {
-            title: 'Achievements',
-            a1: 'ESG Business Strategy Competition Top 11 / 150+',
+            a1: 'ESG Business Strategy Competition — Top 11 / 150+ teams',
             a1d: 'CUHK (Shenzhen)',
             a2: 'Student Union "Outstanding Officer" Award',
             a2d: 'CUHK (Shenzhen)',
-            a3: '60th Anniversary Student Representative',
-            a3d: 'Top 1% Selection'
+            a3: 'CUHK 60th Anniversary Student Representative',
+            a3d: '60 students university-wide'
+        },
+        photography: {
+            title: 'Photography',
+            subtitle: 'Capturing the warmth and texture of the world through the lens',
+            filterAll: 'All',
+            filterCity: 'City',
+            filterLandscape: 'Landscape',
+            filterDetail: 'Details'
         },
         contact: {
             title: 'Contact',
-            locationLabel: 'Location',
-            location: 'Shenzhen / Hong Kong',
-            cta: 'Whether for business collaboration, photography shoots, or just a chat — feel free to reach out.',
-            sendEmail: 'Send Email'
+            phoneLabel: 'Phone',
+            locationLabel: 'Based in',
+            location: 'Hong Kong / Shenzhen',
+            qrLabel: 'WeChat',
+            qrValue: 'Scan to add, or search by phone number',
+            cta: 'Whether you want to talk about cross-border family wealth, a photography collaboration, or simply to say hello — you are welcome to reach out.',
+            sendEmail: 'Send an Email'
+        },
+        footer: {
+            tagline: 'Based in Hong Kong · Cross-border · Long-term'
         }
     }
 };
@@ -257,7 +379,6 @@ function setLanguage(lang) {
     currentLang = lang;
     const translations = i18n[lang];
 
-    // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const keys = key.split('.');
@@ -275,20 +396,19 @@ function setLanguage(lang) {
         }
     });
 
-    // Update lang toggle button text
     const langToggle = document.getElementById('langToggle');
-    const langCurrent = langToggle.querySelector('.lang-current');
-    langCurrent.textContent = lang === 'zh' ? 'EN' : '中';
+    if (langToggle) {
+        langToggle.querySelector('.lang-current').textContent = lang === 'zh' ? 'EN' : '中';
+    }
 
-    // Update HTML lang attribute
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-
-    // Store preference
     localStorage.setItem('preferred-lang', lang);
 }
 
 // ============================================
 // Hero Slideshow
+// 首屏只加载第 1 张；其余背景图在页面加载完成后注入，
+// 避免首屏拉取多张全屏图。
 // ============================================
 function initHeroSlideshow() {
     const slides = document.querySelectorAll('.hero-slide');
@@ -297,6 +417,16 @@ function initHeroSlideshow() {
 
     let currentSlide = 0;
     let slideInterval;
+
+    function hydrateSlides() {
+        slides.forEach(slide => {
+            const bg = slide.getAttribute('data-bg');
+            if (bg) {
+                slide.style.backgroundImage = `url('${bg}')`;
+                slide.removeAttribute('data-bg');
+            }
+        });
+    }
 
     function goToSlide(index) {
         slides.forEach(s => s.classList.remove('active'));
@@ -307,8 +437,7 @@ function initHeroSlideshow() {
     }
 
     function nextSlide() {
-        const next = (currentSlide + 1) % slides.length;
-        goToSlide(next);
+        goToSlide((currentSlide + 1) % slides.length);
     }
 
     function startSlideshow() {
@@ -319,7 +448,6 @@ function initHeroSlideshow() {
         clearInterval(slideInterval);
     }
 
-    // Click indicators to navigate
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             goToSlide(index);
@@ -328,10 +456,24 @@ function initHeroSlideshow() {
         });
     });
 
-    // Pause on hover
     const hero = document.querySelector('.hero');
-    hero.addEventListener('mouseenter', stopSlideshow);
-    hero.addEventListener('mouseleave', startSlideshow);
+    if (hero) {
+        hero.addEventListener('mouseenter', stopSlideshow);
+        hero.addEventListener('mouseleave', startSlideshow);
+    }
+
+    // 第一张已经 preload；等待首屏稳定后再注入其余三张
+    if (document.readyState === 'complete') {
+        hydrateSlides();
+    } else {
+        window.addEventListener('load', () => {
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(hydrateSlides, { timeout: 1200 });
+            } else {
+                setTimeout(hydrateSlides, 300);
+            }
+        });
+    }
 
     startSlideshow();
 }
@@ -342,6 +484,7 @@ function initHeroSlideshow() {
 function initCustomCursor() {
     const cursor = document.getElementById('cursorFollower');
     if (!cursor) return;
+    if (window.matchMedia('(hover: none)').matches) return;   // 触屏设备跳过
 
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
@@ -356,7 +499,6 @@ function initCustomCursor() {
         cursor.style.opacity = '0';
     });
 
-    // Smooth cursor following
     function animateCursor() {
         cursorX += (mouseX - cursorX) * 0.1;
         cursorY += (mouseY - cursorY) * 0.1;
@@ -366,7 +508,6 @@ function initCustomCursor() {
     }
     animateCursor();
 
-    // Enlarge on interactive elements
     const interactiveElements = document.querySelectorAll(
         'a, button, .gallery-item, .exp-card, .skill-category, .achievement-card, .social-link, .contact-item'
     );
@@ -384,8 +525,8 @@ function initNavigation() {
     const navbar = document.querySelector('.navbar');
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
+    if (!navbar || !menuToggle || !navLinks) return;
 
-    // Scroll effect with throttle
     let lastScrollY = 0;
     let ticking = false;
 
@@ -393,25 +534,19 @@ function initNavigation() {
         lastScrollY = window.scrollY;
         if (!ticking) {
             requestAnimationFrame(() => {
-                if (lastScrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
+                navbar.classList.toggle('scrolled', lastScrollY > 50);
                 ticking = false;
             });
             ticking = true;
         }
     });
 
-    // Mobile menu toggle
     menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
-    // Close menu on link click
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             menuToggle.classList.remove('active');
@@ -420,7 +555,6 @@ function initNavigation() {
         });
     });
 
-    // Close menu on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navLinks.classList.contains('active')) {
             menuToggle.classList.remove('active');
@@ -431,30 +565,20 @@ function initNavigation() {
 }
 
 // ============================================
-// Scroll Reveal Animation (Intersection Observer)
+// Scroll Reveal Animation
 // ============================================
 function initScrollReveal() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -60px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add a small random delay for organic feel
-                const delay = Math.random() * 0.2;
-                entry.target.style.transitionDelay = delay + 's';
+                entry.target.style.transitionDelay = (Math.random() * 0.2) + 's';
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-    // Observe all reveal elements
-    document.querySelectorAll('.reveal').forEach(el => {
-        observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
 // ============================================
@@ -464,29 +588,23 @@ function initCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number[data-count]');
     if (!counters.length) return;
 
-    const observerOptions = {
-        threshold: 0.5
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = entry.target;
-                const countTo = parseInt(target.getAttribute('data-count'));
-                animateCounter(target, countTo);
-                observer.unobserve(target);
+                animateCounter(entry.target, parseInt(entry.target.getAttribute('data-count'), 10));
+                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.5 });
 
     counters.forEach(counter => observer.observe(counter));
 }
 
 function animateCounter(element, target) {
+    if (!element) return;
     let current = 0;
     const increment = Math.ceil(target / 40);
-    const duration = 1500;
-    const stepTime = Math.floor(duration / 40);
+    const stepTime = Math.floor(1500 / 40);
 
     const timer = setInterval(() => {
         current += increment;
@@ -503,19 +621,14 @@ function animateCounter(element, target) {
 // ============================================
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+        anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             const target = document.querySelector(targetId);
-            if (target) {
-                const offset = 80;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            if (!target) return;
+            e.preventDefault();
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         });
     });
 }
@@ -524,24 +637,25 @@ function initSmoothScroll() {
 // Parallax Effect on Hero
 // ============================================
 function initParallax() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     let ticking = false;
     window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                const scrolled = window.pageYOffset;
-                const hero = document.querySelector('.hero-content');
-                const slideshow = document.querySelector('.hero-slideshow');
-                if (hero && scrolled < window.innerHeight) {
-                    hero.style.transform = `translateY(${scrolled * 0.25}px)`;
-                    hero.style.opacity = 1 - (scrolled / (window.innerHeight * 0.7));
-                }
-                if (slideshow && scrolled < window.innerHeight) {
-                    slideshow.style.transform = `translateY(${scrolled * 0.15}px)`;
-                }
-                ticking = false;
-            });
-            ticking = true;
-        }
+        if (ticking) return;
+        requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            const slideshow = document.querySelector('.hero-slideshow');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.25}px)`;
+                hero.style.opacity = 1 - (scrolled / (window.innerHeight * 0.7));
+            }
+            if (slideshow && scrolled < window.innerHeight) {
+                slideshow.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+            ticking = false;
+        });
+        ticking = true;
     });
 }
 
@@ -555,19 +669,17 @@ function initPhotoFilter() {
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const filter = btn.getAttribute('data-filter');
 
             galleryItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.style.display = 'block';
+                const match = filter === 'all' || item.getAttribute('data-category') === filter;
+                if (match) {
+                    item.style.display = '';
                     item.style.opacity = '0';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                    }, 50);
+                    setTimeout(() => { item.style.opacity = '1'; }, 50);
                 } else {
                     item.style.display = 'none';
                 }
@@ -593,26 +705,29 @@ function initLightbox() {
     let currentIndex = 0;
     const galleryImages = [];
 
-    // Collect all gallery images
-    galleryItems.forEach((item, index) => {
+    galleryItems.forEach((item) => {
         const img = item.querySelector('.gallery-img');
         const title = item.querySelector('.gallery-title');
         const cat = item.querySelector('.gallery-cat');
         const year = item.querySelector('.gallery-year');
-        if (img) {
-            galleryImages.push({
-                src: img.getAttribute('src'),
-                title: title ? title.textContent : '',
-                cat: cat ? cat.textContent : '',
-                year: year ? year.textContent : ''
-            });
+        if (!img) return;
 
-            // Click to open lightbox
-            item.addEventListener('click', () => {
-                currentIndex = index;
-                openLightbox(currentIndex);
-            });
-        }
+        // 网格里用的是小图，灯箱用 data-full 的原尺寸版本
+        const fullSrc = img.getAttribute('data-full') || img.getAttribute('src');
+
+        galleryImages.push({
+            src: fullSrc,
+            index: galleryImages.length,
+            title: title ? title.textContent : '',
+            cat: cat ? cat.textContent : '',
+            year: year ? year.textContent : ''
+        });
+
+        const idx = galleryImages.length - 1;
+        item.addEventListener('click', () => {
+            currentIndex = idx;
+            openLightbox(currentIndex);
+        });
     });
 
     function openLightbox(index) {
@@ -620,7 +735,7 @@ function initLightbox() {
         if (!image) return;
         lightboxImage.setAttribute('src', image.src);
         lightboxImage.setAttribute('alt', image.title);
-        lightboxCaption.textContent = `${image.title} · ${image.cat} · ${image.year}`;
+        lightboxCaption.textContent = [image.title, image.cat, image.year].filter(Boolean).join(' · ');
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -640,19 +755,14 @@ function initLightbox() {
         openLightbox(currentIndex);
     }
 
-    // Event listeners
     lightboxClose.addEventListener('click', closeLightbox);
     lightboxPrev.addEventListener('click', prevImage);
     lightboxNext.addEventListener('click', nextImage);
 
-    // Close on backdrop click
     lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
+        if (e.target === lightbox) closeLightbox();
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
         if (e.key === 'Escape') closeLightbox();
@@ -668,23 +778,17 @@ function initLangBarAnimation() {
     const langBars = document.querySelectorAll('.lang-bar-fill');
     if (!langBars.length) return;
 
-    const observerOptions = {
-        threshold: 0.3
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const bar = entry.target;
                 const width = bar.style.width;
                 bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 200);
+                setTimeout(() => { bar.style.width = width; }, 200);
                 observer.unobserve(bar);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.3 });
 
     langBars.forEach(bar => observer.observe(bar));
 }
@@ -697,22 +801,15 @@ function initActiveNavHighlight() {
     const navLinks = document.querySelectorAll('.nav-link');
     if (!sections.length || !navLinks.length) return;
 
-    const observerOptions = {
-        rootMargin: '-50% 0px -50% 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.style.color = link.getAttribute('href') === '#' + id
-                        ? 'var(--white)'
-                        : '';
-                });
-            }
+            if (!entry.isIntersecting) return;
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+                link.style.color = link.getAttribute('href') === '#' + id ? 'var(--white)' : '';
+            });
         });
-    }, observerOptions);
+    }, { rootMargin: '-50% 0px -50% 0px' });
 
     sections.forEach(section => observer.observe(section));
 }
@@ -721,19 +818,20 @@ function initActiveNavHighlight() {
 // Initialize Everything
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Load saved language preference
+    // 无条件走一遍 setLanguage：保证 HTML 静态文案与字典不会漂移
     const savedLang = localStorage.getItem('preferred-lang');
-    if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
-        setLanguage(savedLang);
+    setLanguage(savedLang === 'en' ? 'en' : 'zh');
+
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            setLanguage(currentLang === 'zh' ? 'en' : 'zh');
+        });
     }
 
-    // Language toggle
-    document.getElementById('langToggle').addEventListener('click', () => {
-        const newLang = currentLang === 'zh' ? 'en' : 'zh';
-        setLanguage(newLang);
-    });
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Initialize all features
     initHeroSlideshow();
     initCustomCursor();
     initNavigation();
