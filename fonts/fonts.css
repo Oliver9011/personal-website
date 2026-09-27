@@ -1,5 +1,4 @@
-/* 自托管字体 —— 由 Google Fonts 子集切片精简而来
-   仅保留站点实际字符集命中的 unicode-range 切片；中文为可变字体，字重合并为 300-700 */
+/* 自托管字体 —— 按站点字符集裁剪的 Google Fonts 切片；思源宋体为可变字体（300-700） */
 
 @font-face {
   font-family: 'Cormorant Garamond';

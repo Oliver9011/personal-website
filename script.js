@@ -31,7 +31,7 @@ const i18n = {
         about: {
             title: '关于我',
             p1: '我是陶承启，现居香港，任财富规划顾问，主要服务跨境家庭的财富安排。本科毕业于香港中文大学（深圳）环球商务管理专业，硕士毕业于香港中文大学市场营销专业。求学期间曾在加拿大麦克马斯特大学学习一年，并在比利时鲁汶大学交换。',
-            p2: '我的经历集中在四个方向：在开源证券电子组做卖方研究，搭建估值模型、撰写行业报告；在佛山医药健康创投做买方投资，分析并购标的、参与尽职调查；在科特勒咨询做战略项目，做竞争对标与客户细分；在方德证券私人财富管理团队，协助高净值客户梳理资产配置。卖方、买方、咨询、财富管理四个位置都待过，让我习惯从不同视角看同一件事。',
+            p2: '卖方研究、买方投资、战略咨询、私人财富管理——四个方向我都待过。这段经历让我习惯从不同视角看同一件事，也让我清楚一份报告从数字走到结论，中间要经过多少推导。',
             p3: '我目前在诺贝尔家族办公室担任财富规划顾问，同时是中国人寿（海外）的理财顾问。我关注的是跨境家庭的财富结构——身处内地与香港之间，家庭往往要同时面对两套规则、两种货币、两代人的安排。这类问题很难靠单一产品解决，需要先把结构理清楚。我做的事，是从研究出发，把这些变量摊开来看。',
             p4: '同时，我也是一名摄影师。我曾担任香港中文大学（深圳）官方摄影师，为学校传讯与公共关系办公室拍摄国庆升旗、校领导采访等重大活动，作品见于学校官网及官方推文。四年镜头训练教会我的是：先观察，再判断。真正的信息往往藏在别人跳过的细节里——这一点，做研究和看家庭资产是相通的。',
             stat1: '段金融经历',
@@ -172,6 +172,7 @@ const i18n = {
             filterAll: '全部',
             filterCity: '城市',
             filterLandscape: '风光',
+            filterExhibition: '展览',
             filterDetail: '细节'
         },
         contact: {
@@ -211,7 +212,7 @@ const i18n = {
         about: {
             title: 'About Me',
             p1: 'I am Oliver Tao, based in Hong Kong and working as a wealth planning advisor, focused on the wealth arrangements of cross-border families. I hold a BBA in Global Business Studies from The Chinese University of Hong Kong, Shenzhen, and an MSc in Marketing from The Chinese University of Hong Kong. I also spent a year at McMaster University in Canada and an exchange term at KU Leuven in Belgium.',
-            p2: 'My experience spans four directions: sell-side research at Kaiyuan Securities, where I built valuation models and wrote industry reports; buy-side investing at a healthcare-focused VC in Foshan, analysing M&A targets and supporting due diligence; strategy consulting at Kotler, covering competitive benchmarking and client segmentation; and private wealth management at Forthright Securities, supporting HNW clients with asset allocation. Having sat in all four seats, I am used to looking at the same question from more than one angle.',
+            p2: 'Sell-side research, buy-side investing, strategy consulting, private wealth management — I have worked in all four. That range taught me to look at the same question from more than one angle, and showed me how much derivation sits between a number and a conclusion.',
             p3: 'I currently serve as a wealth planning advisor at Nobel Family Office, and as a financial advisor with China Life (Overseas). My focus is the wealth structure of cross-border families. Living between the Mainland and Hong Kong, a family often has to deal with two sets of rules, two currencies, and two generations of arrangements at once. Problems like these rarely have a single-product answer — the structure has to be understood first. That is what I do: start from research, and lay the variables out in the open.',
             p4: 'I am also a photographer. I served as an official photographer for CUHK (Shenzhen), covering major events such as National Day flag-raising ceremonies and leadership interviews for the Communications and Public Relations Office, with my work featured on the university website and official posts. Four years behind a lens taught me to observe first and judge second — real information tends to hide in the details other people skip. The same holds true for research, and for reading a family\'s balance sheet.',
             stat1: 'Finance Roles',
@@ -352,6 +353,7 @@ const i18n = {
             filterAll: 'All',
             filterCity: 'City',
             filterLandscape: 'Landscape',
+            filterExhibition: 'Exhibitions',
             filterDetail: 'Details'
         },
         contact: {
