@@ -4,3 +4,7 @@ Thumbs.db
 
 # 私人工具页：含社交清单与备注，仅本地保留，不随站点发布
 events.html
+
+# 本地验证临时页
+_v.html
+_check.js
